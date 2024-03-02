@@ -481,13 +481,17 @@ img {
   margin-bottom: 16px;
 }
 
+.footer-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-form-input {
   display: inline-block;
-  margin-right: 24px;
   border: 1px solid #ffffff;
   border-radius: 4px;
   background-color: transparent;
-  min-width: 264px;
+  width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding-left: 16px;
@@ -498,8 +502,9 @@ img {
 }
 
 .footer-form-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 4px;
   padding: 8px 24px;
   min-width: 165px;
@@ -513,8 +518,11 @@ img {
   text-align: center;
   color: #ffffff;
   fill: #f4f4fd;
-  gap: 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn-icon {
+  margin-left: 16px;
 }
 
 .footer-form-button:hover,
