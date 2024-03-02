@@ -513,19 +513,19 @@ img {
   transform: translate(-50%, -50%);
   width: 408px;
   min-height: 584px;
-  padding-right: 24px;
-  padding-left: 24px;
-  padding-top: 72px;
-  padding-bottom: 28px;
+  padding: 72px 24px 24px 24px;
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .exit-btn {
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 24px;
   right: 24px;
   padding: 0;
@@ -533,14 +533,16 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #f4f4fd;
-  border: 1px solid #e7e9fc;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   fill: #2e2f42;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.exit-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .exit-btn:hover,
 .exit-btn:focus {
   background-color: #404bbf;
@@ -567,10 +569,10 @@ img {
 }
 
 .form-input-label {
-  display: inline-block;
+  display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -592,19 +594,26 @@ img {
 .form-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  padding: 0 40px;
+  background-color: transparent;
+  padding-left: 0 38px;
+  outline: transparent;
   width: 100%;
   height: 40px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
-  border: 1px solid #404bbf;
+  border-color: #4d5ae5;
   outline: none;
 }
 
 .form-input:focus + .input-icon {
-  fill: #404bbf;
+  fill: #4d5ae5;
+}
+
+.form-textarea-wrapper {
+  display: block;
+  margin-bottom: 16px;
 }
 
 .form-textarea {
