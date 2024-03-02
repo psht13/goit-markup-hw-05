@@ -641,6 +641,7 @@ img {
 
 .form-checkbox-label {
   cursor: pointer;
+  margin: 0;
 }
 
 .form-terms-link {
